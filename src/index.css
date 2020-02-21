@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.navbar-nav .nav-item a {
+    font-size: 14px;
+    color: #8352FF !important;
+    text-transform: uppercase;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 2vw !important;
+    display: block;
+    padding-left: 2vw !important;
+    font-family: 'Poppins';
+    font-weight: 400;
+    position: relative;
+}
+#navbarSupportedContent .navbar-nav .nav-item {
+    padding-right: 4vw;
+    padding-left: 0vw;
+    padding-top: 0;
+}
+.container {
+    max-width: 1680px !important;
+}
+.actionButton button {
+    background: #8352FF;
+    border: 1px solid #8352FF;
+    border-radius: 0;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.signUpLink {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: right;
+
+}
+.actionButton{
+    padding-right: 40px;
+}
+.logoContainer .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: left;
+    padding-left: 0;
+}
+.logoContainer {
+    height: 100%;
+}
+.actionButton button:hover {
+    background: #6734e7;
+    border: 1px solid #6734e7;
+}
+.navbar-nav .nav-item a:hover {
+    background: linear-gradient(to right , #4e1e8d , #492874, #a51cad);
+        color: white !important;
+}
+.navbar {
+    padding: 0 !important;
+    height: 100%;
+}
+.navbar-nav .nav-item.active a {
+    background: linear-gradient(to right , #4e1e8d , #492874, #a51cad);
+    color: white !important;
+}
+img {
+    max-width: 100%;
+}
+.signUpTwitch img {
+    width: 30px;
+    margin-right: 7px;
+}
+.mainBannerSection .bannerContent h1 {
+    color: white;
+    font-size: 5vw;
+    font-family: 'Poppins';
+    font-weight: 700;
+    line-height: 4.6vw;
+}
+.mainBannerSection .bannerContent {
+    position: absolute;
+    margin-left: 10em;
+}
+.mainBanner {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.mainBannerSection .bannerContent .NfluenceLogo {
+    width: 100%;
+    max-width: 180px;
+}
+.navbar-nav .nav-item.active a::before {
+    content: "";
+    border-left: 1px solid white;
+    height: 16px;
+    left: 34px;
+    position: absolute;
+    top: 21px;
+}
+.headerFonts .icons {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.headerFonts .icons a {
+    color: #000000;
+}
+.headerFonts .icons li {
+    display: inline-block;
+    background: #6B3ECD;
+    margin-right: 30px;
+    border-radius: 100px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding-top: 2px;
+    cursor: pointer;
+}
+.headerFonts .icons li .fa {
+    font-size: 18px;
+}
+.howItWorksContent h1 {
+    color: #3A3C54;
+    font-size: 24px;
+    font-family: 'Poppins';
+    font-weight: bold;
+        position: relative;
+
+}
+.howItWorksContent p {
+    font-size: 17px;
+    font-family: 'Poppins';
+}
+.howItWorksContent h1::after {
+    background-color: #3A3C54;
+    content: "";
+    height: 10px;
+    width: 157px;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    top: 34px;
+}
+.howItWorksIcon {
+    padding-bottom: 75px;
+}
+.howItWorksContent p {
+    font-size: 17px;
+    font-family: 'Poppins';
+    padding-top: 35px;
+}
+.howItWorksIcon {
+    padding-bottom: 75px;
+    padding-top: 85px;
+}
+.howItWorksSection .sectionTitle {
+    font-size: 92px;
+    font-family: 'Poppins';
+}
+.howItWorksSection .sectionTitle::after {
+    background-color: #3A3C54;
+    content: "";
+    height: 10px;
+    width: 277px;
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    top: 104px;
+}
+
+.howItWorksSection {
+    padding-top: 130px;
+    padding-bottom: 90px;
+}
+.signUpBanner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+.signUpBanner .bannerContent {
+    text-align: center;
+}
+.signUpBanner .bannerContent h1 {
+    color: white;
+    font-size: 36px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+@media all and (min-width:1700px){
+.headerFonts {
+    padding-right: 7vw;
+ 
+}
+}
+ 
+@media all and (max-width:1700px){
+  .headerFonts {
+    padding-right: 1em;
+}
+}
