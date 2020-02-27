@@ -11,12 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ 
+@font-face {
+    font-family: proximaNova;
+    src: url("./fonts/proximaNova.ttf");
+  }
+  @font-face {
+    font-family: proximaNovaBold;
+    src: url("./fonts/proximaNovaBold.ttf");
+  }
+  @font-face {
+    font-family: proximaNovaXBold;
+     src: url("./fonts/proximaNovaXBold.ttf");
+  }
+
+
 .navbar-nav .nav-item a {
     font-size: 14px;
     color: #8352FF !important;
     text-transform: uppercase;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 26px;
+    padding-bottom: 26px;
     padding-right: 2vw !important;
     display: block;
     padding-left: 2vw !important;
@@ -29,6 +44,9 @@ code {
     padding-left: 0vw;
     padding-top: 0;
 }
+#banner_section img {
+    width: 100%;
+}
 .container {
     max-width: 1680px !important;
 }
@@ -38,6 +56,7 @@ code {
     border-radius: 0;
     font-family: 'Poppins';
     font-weight: 400;
+    height: 60px;
 }
 .signUpLink {
     display: flex;
@@ -45,6 +64,13 @@ code {
     height: 100%;
     float: right;
 
+}
+.brandTitle .title {
+    font-family: proximaNovaXBold;
+    color: #313254;
+    position: relative;
+    font-size: 120px;
+    margin-bottom: 50px;
 }
 .actionButton{
     padding-right: 40px;
@@ -78,16 +104,20 @@ code {
 img {
     max-width: 100%;
 }
+.streamersWaiting .thumbImage img {
+    width: 100%;
+    max-width: 400px;
+}
 .signUpTwitch img {
     width: 30px;
     margin-right: 7px;
 }
 .mainBannerSection .bannerContent h1 {
     color: white;
-    font-size: 5vw;
+    font-size: 110px;
     font-family: 'Poppins';
     font-weight: 700;
-    line-height: 4.6vw;
+    line-height: 100px;
 }
 .mainBannerSection .bannerContent {
     position: absolute;
@@ -107,9 +137,33 @@ img {
     content: "";
     border-left: 1px solid white;
     height: 16px;
-    left: 34px;
+    left: 1.5vw;
     position: absolute;
-    top: 21px;
+    top: 29px;
+}
+.itsTimeto p {
+    font-size: 22px;
+    color: white;
+    font-family: proximaNova;
+}
+.itsTimeto h1 {
+    color: white;
+    font-size: 7vw;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+section#banner_section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.commonAttrofGrid ul {
+    padding-left: 0;
+}
+.itsTimeto {
+    position: absolute;
+    margin-top: 200px;
 }
 .headerFonts .icons {
     margin: 0;
@@ -155,17 +209,15 @@ img {
     left: 0;
     top: 34px;
 }
-.howItWorksIcon {
-    padding-bottom: 75px;
-}
 .howItWorksContent p {
     font-size: 17px;
     font-family: 'Poppins';
     padding-top: 35px;
 }
 .howItWorksIcon {
-    padding-bottom: 75px;
+padding-bottom: 0;
     padding-top: 85px;
+    min-height: 259px;
 }
 .howItWorksSection .sectionTitle {
     font-size: 92px;
@@ -183,7 +235,7 @@ img {
 }
 
 .howItWorksSection {
-    padding-top: 130px;
+    padding-top: 170px;
     padding-bottom: 90px;
 }
 .signUpBanner {
@@ -202,6 +254,447 @@ img {
     font-weight: bold;
     padding-bottom: 20px;
 }
+.mainBanner .mainBannerbackGroundImage {
+    width: 100%;
+}
+.thumbContent .headingSection h1 {
+  font-family: 'Poppins';
+font-weight: bold;
+color: #313254;
+font-size: 48px;
+line-height: 54px;
+padding-bottom: 30px;
+position: relative;
+}
+.thumbContent .upperTitle {
+    color: #8452ff;
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 21px;
+    letter-spacing: 1.4px;
+}
+.page-section {
+    padding: 8rem 0;
+}
+.thumbImage img {
+    width: 100%;
+    max-width: 600px;
+}
+.contentSection p {
+    font-size: 19px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 47px;
+}
+.numbersAndMillions {
+    border: 1px solid #58ece5;
+    padding-left: 30px;
+    width: 100%;
+    padding-right: 30px;
+    min-height: 226px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.numbersAndMillions .numbers {
+    font-size: 60px;
+    font-family: proximaNovaXBold;
+    font-weight: bold;
+    color: #313254;
+}
+.numbersAndMillions .millions {
+    font-weight: bold;
+    font-family: proximaNovaXBold;
+    font-size: 40px;
+    color: #313254;
+}
+.numbersAndMillions .globalContent {
+    font-family: arial;
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #313254;
+}
+.innerglobal span {
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.numbersAndMillions .percentageContent {
+    font-family: proximaNovaXBold;
+    font-size: 40px;
+    color: #313254;
+}
+.innerglobal span {
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.numbersAndMillions .revinew {
+    font-size: 13px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.numbersAndMillions .percentageContentText {
+    font-family: proximaNova;
+    font-weight: bold;
+    color: #313254;
+}
+#go_Nano .title {
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+}
+.nanoContent {
+    width: 100%;
+    max-width: 1220px;
+    margin: auto;
+    position: relative;
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-top: 115px;
+}
+.nanoInnercontent {
+    position: relative;
+}
+.nanoInnercontent::before {
+    content: "";
+    border-top: 2px solid white;
+    position: absolute;
+    top: -20px;
+    z-index: 9999999;
+    width: 90px;
+    left: 0;
+    right: 0;
+    /* text-align: center; */
+    /* display: block; */
+    margin: auto;
+}
+.nanoContent p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+.nanoContent .businessInsider {
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    padding-top: 40px;
+    display: block;
+    font-style: italic;
+}
+.leftQuote {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.valueScaleGraph {
+    border-bottom: 8px solid black;
+    margin-bottom: 2em;
+    padding-bottom: 90px;
+    padding-top: 100px;
+}
+.rightQuote {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.leftNano {
+    float: left;
+}
+.underGraph h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+.underGraph p {
+    font-size: 21px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+.rightMicro {
+    float: right;
+}
+.underGraph p {
+    font-size: 21px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+#value_scale .title {
+ color: #313254;
+}
+.fontStyle {
+    font-size: 110px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+#extreme_roi h1 {
+    color: #313254;
+}
+.extremeGraphImage ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+.extremeGraphImage ul p {
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Poppins';
+}
+.extremeGraphImage ul strong {
+    color: #8452FF;
+}
+.extremeGraphImage .CUSTOMERS {
+    font-size: 3vw;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+.tagLine {
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+.thinLine::after {
+    background-image: linear-gradient(to right , #7009fc , #c126cb);
+    content: "";
+    height: 3px;
+    width: 229px;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#extreme_roi .container {
+    padding-top: 60px;
+}
+.extremeGraphImage {
+    padding-top: 90px;
+    padding-bottom: 70px;
+}
+.competitiveRows {
+    display: inline-block;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: left;
+}
+.iconForComp {
+    float: left;
+}
+.iconForComp svg {
+    width: 50px;
+    height: 50px;
+}
+.comptContent {
+    float: left;
+    padding-left: 53px;
+}
+.comptContent h2 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 30px;
+    font-size: 23px;
+    font-weight: 700;
+}
+.comptContent p {
+    color: white;
+    max-width: 460px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+#comperitive_advantage .title {
+    color: white;
+}
+#comperitive_advantage .tagLine {
+    color: white;
+    margin-bottom: 4.5em;
+        position: relative;
+}
+.screens {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 6em !important;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel {
+    position: relative;
+}
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+.screeNGrid {
+    display: inline-block;
+    width: 100%;
+}
+.screens .leftTextPart {
+    float: left;
+    position: relative;
+    left: 10%;
+    top: 4vw;
+    bottom: 0px;
+}
+.screens .gradientBorder .title {
+    position: relative;
+}
+.screens .screenTagLine {
+    font-size: 20px;
+    padding-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.competitiveRows {
+    display: inline-block;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: left;
+}
+.iconForComp {
+    float: left;
+}
+.iconForComp svg {
+    width: 50px;
+    height: 50px;
+}
+.screens .comptContent p {
+    color: black;
+    font-weight: 100;
+}
+.screens .comptContent strong {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+.screens .leftTextPart .title::after {
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.gradientBorder .title::after {
+    background-image: linear-gradient(to right , #7009fc , #c126cb);
+    content: "";
+    height: 10px;
+    width: 157px;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+}
+.screens span img {
+    width: 50px;
+    margin-right: 40px;
+}
+.screens .carousel-control-prev-icon {
+    display: none;
+}
+.brandPageSlider a {
+    position: unset;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    display: contents !important;
+}
+.brandPageSlider {
+    text-align: center;
+    position: relative;
+    top: -59px;
+}
+.rightScreenSection img {
+    width: 80%;
+    float: right;
+}
+.rightScreenSection {
+    float: right;
+    width: 50%;
+}
+.screens .next-arrow img {
+    transform: rotate(180deg);
+}
+.SameSection {
+    padding-top: 8em;
+    padding-bottom: 3em;
+}
+section#boxsSection {
+    padding-bottom: 7em;
+}
+.gridImageText .imageInfo p {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+.gridImageText .imgContainer {
+    padding-bottom: 50px;
+    min-height: 209px;
+}
+ .mainHeadingLine::after {
+    background-image: linear-gradient(to right , #7009fc , #c126cb);
+    content: "";
+    height: 3px;
+    width: 229px;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.gridImageText {
+    padding-top: 90px;
+}
+#gridImagesWithNumbers .mainHeadingLine {
+    font-size: 90px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+#gridImagesWithNumbers .imageInfo p {
+    font-size: 30px;
+}
+.mainHeadingLine {
+    position: relative;
+}
+.commonAttrofGrid .mainHeadingLine {
+    position: relative;
+    font-size: 3vw;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+.commonAttrofGrid .mainHeadingLine::after {
+    bottom: -7px;
+    left: 0;
+    right: auto;
+    margin: auto;
+}
+.commonAttrofGrid  p {
+    line-height: 35px;
+    font-family: 'Poppins';
+   padding-top: 30px;
+}
+.audienceContainer p {
+    width: 100%;
+  max-width: 41vw;
+}
+.commonAttrofGrid li {
+    font-size: 17px;
+}
+.commonAttrofGrid {
+    padding: 70px;
+}
 
 @media all and (min-width:1700px){
 .headerFonts {
@@ -214,4 +707,355 @@ img {
   .headerFonts {
     padding-right: 1em;
 }
+}
+
+@media  all and (max-width:1600px) {
+.headerImage {
+    height: 160px !important;
+}
+    .navbar-nav .nav-item a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+    .navbar-nav .nav-item.active a::before {
+    top: 22px;
+}
+    .extremeGraphImage ul p {
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Poppins';
+}
+ .contentSection p {
+    font-size: 15px;
+    line-height: 31px;
+}
+.thumbContent .headingSection h1 {
+    font-size: 34px;
+    line-height: 38px;
+}
+.fontStyle {
+    font-size: 75px;
+}
+.screens .leftTextPart {
+    left: 2%;
+}
+#go_Nano {
+	height: 100vh !important;
+}
+.brandPageSlider {
+    top: 1px;
+}
+.screens span img {
+    width: 40px;
+}
+ 
+
+}
+@media  all and (max-width:1272px) {
+    section#audience_control {
+    background-size: 100% 100% !important;
+}
+.numbersAndMillions .numbers {
+    font-size: 50px;
+}
+.numbersAndMillions .globalContent {
+    font-size: 14px;
+ 
+}
+.numbersAndMillions .percentageContentText {
+    font-size: 13px;
+}
+.numbersAndMillions .percentageContent {
+    font-size: 26px;
+}
+.numbersAndMillions {
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+ 
+}
+@media all and (max-width:1400px){
+.mainBannerSection .bannerContent h1 {
+    font-size: 80px;
+    line-height: 79px;
+}
+.howItWorksSection .sectionTitle {
+    font-size: 82px;
+}
+.signUpBanner {
+    height: 388px !important;
+}
+}
+
+@media all and (max-width:1200px){
+#comperitive_advantage .comptContent p {
+    max-width: 100%;
+}
+}
+@media  all and (max-width:1160px) {
+.screens .leftTextPart {
+    float: none;
+    width: 100%;
+}
+.screens .comptContent {
+    float: none !important;
+        padding-left: 80px;
+}
+
+.rightScreenSection {
+    float: none;
+    width: 100%;
+}
+.comptContent p {
+    max-width: 100%;
+}
+}
+
+@media all and (max-width:995px){
+    .logoContainer .logo img {
+    width: 100%;
+    max-width: 280px;
+}
+.actionButton button {
+    height: auto;
+}
+    .extremeGraphImage {
+    text-align: center;
+}
+.audienceContainer p {
+    width: 100%;
+    max-width: 100%;
+}
+.commonAttrofGrid {
+    padding: 40px;
+}
+.commonAttrofGrid .mainHeadingLine {
+    font-size: 40px;
+}
+#gridImagesWithText {
+    padding-top: 0 !important;
+        padding-bottom: 0 !important;
+}
+.streamersWaiting .thumbContent {
+    padding-top: 50px;
+}
+.itsTimeto {
+    position: absolute;
+    margin-top: 0;
+}
+.extremeGraphImage {
+    padding-bottom: 0;
+}
+.extremeGraphImage .CUSTOMERS {
+    font-size: 30px;
+}
+.extremeGraphImage ul p {
+    display: block;
+}
+.extremeGraphImage ul strong {
+    display: block;
+}
+    .screens .comptContent {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+    .competitiveRows {
+    text-align: center;
+}
+.iconForComp {
+    float: none;
+    padding-bottom: 20px;
+}
+.comptContent {
+    float: none;
+    padding-left: 0;
+}
+    .nanoContent {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.thumbContent .headingSection h1 br {
+    display: none;
+}
+.thumbContent .headingSection h1 {
+    font-size: 34px;
+}
+    .signUpBanner .bannerContent h1 {
+    font-size: 25px;
+}
+.howItWorksSection .sectionTitle {
+    text-align: center;
+}
+.howItWorksSection .sectionTitle::after {
+    margin: auto;
+    right: 0;
+}
+    .howItWorksContent h1 {
+    font-size: 15px;
+}
+.howItWorksContent p {
+    font-size: 13px;
+}
+.howItWorksSection .sectionTitle {
+    font-size: 52px;
+}
+.howItWorksSection .sectionTitle::after {
+    width: 177px;
+    top: 64px;
+}
+    .howItWorksIcon img {
+    width: 100%;
+    max-width: 60px;
+}
+.howItWorksIcon {
+    min-height: 189px;
+}
+ .headerFonts {
+    padding-right: 0;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+.menuIcon > div {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+}
+.navbar-toggler {
+    padding: 12px 0px 12px 13px !important;
+}
+#navbarSupportedContent .navbar-nav .nav-item {
+    padding-right: 0;
+}
+.mainBannerSection .bannerContent h1 {
+    font-size: 44px;
+    line-height: 47px;
+}
+.mainBannerSection .bannerContent {
+    margin-left: 4em;
+}
+.actionButton {
+    padding-right: 0;
+}
+}
+
+
+@media all and (max-width:767px){
+.numbersAndMillions {
+    text-align: center;
+}
+.fontStyle {
+    font-size: 54px;
+}
+.rightMicro {
+    float: none;
+    text-align: center;
+}
+.leftNano {
+	float: none;
+	text-align: center;
+}
+.brandTitle .title {
+    font-size: 80px;
+}
+ .brandHeader .gradientBorder .title::after {
+    width: 90px;
+    bottom: -7px;
+}
+.headerImage {
+    height: 111px !important;
+}
+.signUpLink .signUpTwitch {
+    font-size: 13px;
+}
+}
+ 
+@media all and (max-width:575px){
+    .screens .leftTextPart .title::after {
+    bottom: -15px;
+    width: 97px;
+}
+    .fontStyle {
+    font-size: 34px;
+}
+.tagLine {
+    font-size: 12px;
+}
+    #go_Nano .title {
+    font-size: 60px;
+}
+    .howItWorksContent h1 {
+    font-size: 21px;
+}
+.howItWorksSection .sectionTitle {
+    font-size: 42px;
+}
+    .howItWorksContent h1::after {
+    left: 0;
+    top: 50px;
+    right: 0;
+    margin: auto;
+}
+    .howItWorksContent {
+    text-align: center;
+}
+ .logoContainer .logo img {
+    width: 100%;
+    max-width: 160px;
+}
+.headerImage {
+    height: 79px !important;
+}
+.signUpTwitch img {
+    width: 19px;
+    margin-right: 7px;
+}
+.headerFonts .icons li {
+    padding-top: 0;
+    margin-right: 15px;
+}
+.headerFonts .icons li .fa {
+    font-size: 13px;
+}
+.mainBannerSection .bannerContent .NfluenceLogo {
+    width: 100%;
+    max-width: 80px;
+}
+.mainBanner .actionButton button {
+    font-size: 10px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 6px;
+}
+.mainBannerSection .bannerContent h1 {
+    font-size: 30px;
+    line-height: 24px;
+}
+#gridImagesWithNumbers .mainHeadingLine {
+    font-size: 45px;
+}
+.commonAttrofGrid {
+    padding-left: 0;
+    padding-right: 0;
+}
+.commonAttrofGrid br {
+    display: none;
+}
+.commonAttrofGrid .mainHeadingLine {
+    font-size: 45px;
+}
+.itsTimeto p {
+    font-size: 11px;
+}
+}
+
+@media all and (max-width:374px){
+.mainBannerSection .bannerContent h1 {
+    font-size: 20px;
+    line-height: 17px;
+}
+
 }

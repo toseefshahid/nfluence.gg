@@ -7,35 +7,59 @@ import Camera from "../images/camera.png";
 import Picon from "../images/pp.png";
 import HowItWorksBack from "../images/howItWorksBack.png";
 import BottomBanner from "../images/bottom-banner.png";
-
+import $ from "jquery";
 
 class HomePage extends Component {
+  componentDidMount() {
+    this.loadJQuery();
+  }
+
+  loadJQuery() {
+    // if ($(window).width() < 530) {
+    //   var text = $(".signUpTwitch span").text();
+    //   $(".signUpTwitch span").text(
+    //     text.replace("Sign up with Twitch", "Sign up")
+    //   );
+    // }
+ 
+    if (window.location.href.indexOf("/") > -1) {
+      $("#navbarSupportedContent .navbar-nav .nav-item").removeClass("active");
+      $(".homePage")
+        .parent(".nav-item")
+        .addClass("active");
+    }
+  }
+
   render() {
-            var howItWorksBackground = {
-              width: "auto",
-              height: "auto",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundPosition: "-1px",
-              backgroundImage: `url(${HowItWorksBack})`
-            };
-            var signUpBanner = {
-              width: "auto",
-              height: "608px",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundPosition: "-1px",
-              backgroundImage: `url(${BottomBanner})`
-            };
+    var howItWorksBackground = {
+      width: "auto",
+      height: "auto",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      marginTop: "-71px",
+      backgroundPosition: "-1px",
+      backgroundImage: `url(${HowItWorksBack})`
+    };
+    var signUpBanner = {
+      width: "auto",
+      height: "608px",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundPosition: "-1px",
+      backgroundImage: `url(${BottomBanner})`
+    };
     return (
       <main class="main">
         <section className="mainBannerSection" id="section_01">
           <div class="row no-gutters">
             <div class="col-lg-12 col-xl-12">
               <div className="mainBanner">
-                <img src={HomeMainBanner} />
+                <img
+                  className="mainBannerbackGroundImage"
+                  src={HomeMainBanner}
+                />
                 <div className="bannerContent">
                   <img className="NfluenceLogo" src={NfluenceBannerLogo} />
                   <h1>
@@ -46,7 +70,7 @@ class HomePage extends Component {
                     <button class="btn btn-primary signUpTwitch">
                       {" "}
                       <img src={TwitchIcon} />
-                      Sign up with Twitch{" "}
+                      <span>Sign up with Twitch</span>
                     </button>
                   </div>
                 </div>
@@ -66,7 +90,7 @@ class HomePage extends Component {
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-4 col-xl-4">
+              <div class="col-lg-4 col-md-4 col-xl-4 col-sm-4">
                 <div className="howItWorksContent">
                   <div className="howItWorksIcon">
                     {" "}
@@ -79,26 +103,26 @@ class HomePage extends Component {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-4 col-xl-4">
+              <div className="col-lg-4 col-md-4 col-xl-4 col-sm-4">
                 <div className="howItWorksContent">
                   <div className="howItWorksIcon">
                     {" "}
                     <img src={Camera} />
                   </div>
-                  <h1>Choose a campaign. </h1>
+                  <h1>Complete live on stream. </h1>
                   <p>
                     Perform the task live and upload. Our <br /> tech instantly
                     confirms when complete.
                   </p>
                 </div>
               </div>
-              <div className="col-lg-4 col-xl-4">
+              <div className="col-lg-4 col-md-4 col-xl-4 col-sm-4">
                 <div className="howItWorksContent">
                   <div className="howItWorksIcon">
                     {" "}
                     <img src={Picon} />
                   </div>
-                  <h1>Choose a campaign. </h1>
+                  <h1>Cashout with Paypal. </h1>
                   <p>
                     Cashout at $5.00. Instant pay into <br /> your PayPal
                     account.

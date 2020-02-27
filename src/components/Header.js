@@ -20,6 +20,14 @@ import $ from "jquery";
           .parent(".nav-item")
           .addClass("active");
       });
+          if ($(window).width() < 530) {
+            var text = $(".signUpLink .signUpTwitch span").text();
+            $(".signUpLink .signUpTwitch span").text(
+              text.replace("Sign up with Twitch", "Sign up")
+            );
+          }
+
+       
     }
 
     render() {
@@ -30,6 +38,7 @@ import $ from "jquery";
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundPosition: "-1px",
+        backgroundColor: "#250453",
         backgroundImage: `url(${headerImage})`
       };
       var navigationImage = {
@@ -46,13 +55,15 @@ import $ from "jquery";
           <div className="headerImage" style={headerImg}>
             <div class="container logoContainer">
               <div class="logo">
-                <img src={Logo} />
+                <Link to="/">
+                  <img src={Logo} />
+                </Link>
               </div>
               <div className="actionButton signUpLink">
                 <button class="btn btn-primary signUpTwitch">
                   {" "}
                   <img src={TwitchIcon} />
-                  Sign up with Twitch{" "}
+                  <span>Sign up with Twitch </span>
                 </button>
               </div>
             </div>
@@ -68,7 +79,11 @@ import $ from "jquery";
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span className="navbar-toggler-icon" />
+                <div className="menuIcon">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
               </button>
               <div
                 className="collapse navbar-collapse"
@@ -76,17 +91,17 @@ import $ from "jquery";
               >
                 <ul className="navbar-nav mr-auto">
                   <li className="nav-item active">
-                    <Link className="nav-link" to="/">
+                    <Link className="nav-link homePage" to="/">
                       Home
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/brands">
+                    <Link className="nav-link brandsItem" to="/brands">
                       Brands
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/streamers">
+                    <Link className="nav-link streamsItem" to="/streamers">
                       Streamers
                     </Link>
                   </li>
@@ -96,35 +111,35 @@ import $ from "jquery";
                     </Link>
                   </li>
                 </ul>
-                <div className="headerFonts">
-                  <ul className="icons">
-                    <li>
+              </div>
+              <div className="headerFonts">
+                <ul className="icons">
+                  <li>
+                    {" "}
+                    <a href="#" title="Instagram">
                       {" "}
-                      <a href="#" title="Instagram">
-                        {" "}
-                        <i class="fa fa-instagram"></i>{" "}
-                      </a>{" "}
-                    </li>
-                    <li>
+                      <i class="fa fa-instagram"></i>{" "}
+                    </a>{" "}
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="#" title="Twitter">
                       {" "}
-                      <a href="#" title="Twitter">
-                        {" "}
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a href="#" title="Facebook">
-                        <i class="fa fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="Youtube">
-                        <i class="fa fa-youtube-play"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="#" title="Facebook">
+                      <i class="fa fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Youtube">
+                      <i class="fa fa-youtube-play"></i>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </nav>
           </div>
