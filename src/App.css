@@ -36,3 +36,127 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.mainSection{
+  font-family: 'Poppins';
+}
+
+#footerSection{
+  height: 100;
+  width: 100;
+}
+
+.aboutSection1{
+  margin-top: 150px;
+  padding-right: 200px;
+}
+
+.aboutSection1 h1{
+  color: black;
+  font-size: 100px;
+  font-weight: bold;
+  padding-left: 20px;
+
+}
+
+.aboutSection1 p{
+  color: black;
+  font-size: 18px;
+  padding-left: 20px;
+
+}
+
+.aboutSection2 img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 36%;
+  width: 24%;
+}
+
+
+.aboutSection2 p{
+  text-align: center;
+  font-size: 18px;
+}
+
+.footerTitle{
+  text-align: end;
+  padding-right: 7%;
+  padding-top: 200px;
+}
+
+.footerTitle h4{
+  color: white;
+  font-weight: lighter;
+  font-size: 30px; 
+
+}
+
+.footerTitle h1{
+  color: black;
+  font-weight: bold;
+  font-size: 90px;
+  margin-top: -20px;
+}
+
+.footerContent{
+  color: white;
+  margin-top: 144px;
+}
+
+.footerContent h3{
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.footerContent p{
+  font-size: 18px;
+}
+
+.footerContent span{
+  color: aqua;
+}
+
+.nfluenceLogo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -85px;
+  height: 60%;
+  widows: 60%;
+}
+
+.nfluenceLogoLine{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brands p,h3{
+  text-align: right;
+}
+
+.nfluence{
+  display: inline-block;
+
+}
+.verticalLine{
+  padding-bottom: 220px;
+  background-image: linear-gradient(black 66%, aqua 0%);
+  background-position: center;
+  background-size: 2px 5px;
+  background-repeat: repeat-y;
+}
+
+.underLine {
+  border: 2px solid #6B3ECD;
+  width: 19%;
+  margin-top: 5px;
+  margin-bottom: 35px;
+
+}
