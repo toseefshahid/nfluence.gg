@@ -38,42 +38,40 @@ import SupportStreamers from "../images/about_us/supportStreamers.png";
                     Activision, Major League Gaming, Riot Games, THQ, Fnatic, and many more. We love gaming
                     and we champion the talented gaming community.
                 </p>
-                
               </div>
-              <div class="row aboutSection2" style={{ marginTop:100 }}>
-                <div class="col-4 decentralized">
-                  <img src={Decentralized}></img>
-                  <br/>
-                  <p>
-                    DECENTRALIZED
-                  </p>
-                  <p>
-                    gamer influencing
-                    marketing economy
-                  </p>
-                  
-                </div>
-                <div class="col-4">
-                  <img src={SupportStreamers}></img>
-                  <br/>
-                  <p>
-                    SUPPORT STREAMERS
-                  </p>
-                  <p>
-                    leverage and monetize
-                    their influence
-                  </p>
-                </div>
-                <div class="col-4">
-                  <img src={HelpBrands}></img>
-                  <br/>
-                  <p>
-                    HELP BRANDS
-                  </p>
-                  <p>
-                    connect with
-                    highly engaged audiences
-                  </p>
+              <div class="aboutSection2">
+                <div class="row">
+                  <div class="col-4">
+                    <img src={Decentralized}></img>
+                    <p>
+                      DECENTRALIZED
+                    </p>
+                    <p>
+                      gamer influencing<br/>
+                      marketing economy
+                    </p>
+                    
+                  </div>
+                  <div class="col-4">
+                    <img src={SupportStreamers}></img>
+                    <p>
+                      SUPPORT STREAMERS
+                    </p>
+                    <p>
+                      leverage and monetize<br/>
+                      their influence
+                    </p>
+                  </div>
+                  <div class="col-4">
+                    <img src={HelpBrands}></img>
+                    <p>
+                      HELP BRANDS
+                    </p>
+                    <p>
+                      connect with<br/>
+                      highly engaged audiences
+                    </p>
+                  </div>
                 </div>
 
               </div>
@@ -106,14 +104,16 @@ import SupportStreamers from "../images/about_us/supportStreamers.png";
                   <div class="col-1 verticalLine"></div>
                 </div>
             </div>
-            <div class="col-3 streamers">
-              <h3 class="text-left">
-                STREAMERS
-                <hr   align="left" class="underLine"/>
-              </h3>
-              <p>Have <span>highly engaged audiences</span></p>
-              <p>Want to <span>monetize their stream</span></p>
-              <p>Don't know how to <span>connect with brands</span></p>
+            <div class="col-3">
+              <div class="streamers">
+                <h3 class="text-left">
+                  STREAMERS
+                  <hr   align="left" class="underLine"/>
+                </h3>
+                <p>Have <span>highly engaged audiences</span></p>
+                <p>Want to <span>monetize their stream</span></p>
+                <p>Don't know how to <span>connect with brands</span></p>
+              </div>
             </div>
           </div>
         </section>
