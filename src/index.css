@@ -25,7 +25,12 @@ code {
      src: url("./fonts/proximaNovaXBold.ttf");
   }
 
-
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #8352ff !important;
+    border-color: #8352ff !important;
+    box-shadow: 0 0 0 0.2rem rgb(131, 82, 255) !important;
+}
 .navbar-nav .nav-item a {
     font-size: 14px;
     color: #8352FF !important;
@@ -183,6 +188,9 @@ section#banner_section {
     text-align: center;
     padding-top: 2px;
     cursor: pointer;
+}
+    .leftNano h3 {
+    text-align: left;
 }
 .headerFonts .icons li .fa {
     font-size: 18px;
@@ -710,6 +718,9 @@ section#boxsSection {
 }
 
 @media  all and (max-width:1600px) {
+    .brandTitle .title {
+    font-size: 80px;
+}
 .headerImage {
     height: 160px !important;
 }
@@ -943,6 +954,12 @@ section#boxsSection {
 
 
 @media all and (max-width:767px){
+    .leftNano h3 {
+    text-align: center;
+}
+.rightMicro h3 {
+    text-align: center;
+}
 .numbersAndMillions {
     text-align: center;
 }
