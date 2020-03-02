@@ -91,31 +91,22 @@ import $ from "jquery";
               >
                 <ul className="navbar-nav mr-auto">
                   <li className="nav-item active">
-                    <Link className="nav-link homePage" to="/nfluence.gg">
+                    <Link className="nav-link homePage" to="/">
                       Home
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link
-                      className="nav-link brandsItem"
-                      to="/nfluence.gg/brands"
-                    >
+                    <Link className="nav-link brandsItem" to="/brands">
                       Brands
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link
-                      className="nav-link streamsItem"
-                      to="/nfluence.gg/streamers"
-                    >
+                    <Link className="nav-link streamsItem" to="/streamers">
                       Streamers
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link
-                      className="nav-link aboutItem"
-                      to="/nfluence.gg/about"
-                    >
+                    <Link className="nav-link aboutItem" to="/about">
                       About us
                     </Link>
                   </li>
