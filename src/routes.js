@@ -7,7 +7,7 @@ import Streamers from "./components/Streamers";
 import About from "./components/About";
 
 const RedirectToLandingPage = () => {
-  return <Redirect to="/" />;
+  return <Redirect to="/nfluence.gg" />;
 };
  export default class routes extends Component {
   render() {
@@ -15,10 +15,10 @@ const RedirectToLandingPage = () => {
       <React.Fragment>
         <Header />
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/brands" component={Brands} />
-          <Route path="/streamers" component={Streamers} />
-          <Route path="/about" component={About} />
+          <Route exact path="/nfluence.gg" component={HomePage} />
+          <Route path="/nfluence.gg/brands" component={Brands} />
+          <Route path="/nfluence.gg/streamers" component={Streamers} />
+          <Route path="/nfluence.gg/about" component={About} />
           <Route component={RedirectToLandingPage} />
         </Switch>
       </React.Fragment>

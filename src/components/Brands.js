@@ -87,7 +87,10 @@ class Brands extends Component {
                 <div className="thumbContent text-left">
                   <div className="headingSection brandTitle  gradientBorder">
                     <h2 class="title"> Brands </h2>
-                    <span className="upperTitle"> THE MOST INTELLIGENT </span>
+                    <span className="upperTitle">
+                      {" "}
+                      WE OFFER THE MOST INTELLIGENT
+                    </span>
                     <h1 className="title">
                       {" "}
                       Machine-Learning <br /> Inﬂuencer Marketing Platform{" "}

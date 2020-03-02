@@ -25,6 +25,150 @@ code {
      src: url("./fonts/proximaNovaXBold.ttf");
   }
 
+
+
+
+
+
+   /* Start about us code */
+.mainSection{
+  font-family: 'Poppins';
+}
+.aboutSection1 h1 {
+    color: #313254;
+    font-size: 5vw;
+    font-weight: bold;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.aboutSection1 h1::after{
+background-image: linear-gradient(to right , #7009fc , #c126cb);
+    content: "";
+    height: 10px;
+    width: 157px;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+}
+
+.aboutSection1 p {
+    color: #313254;
+    font-size: 20px;
+    padding-left: 0;
+    line-height: 45px;
+    margin-top: 15px;
+}
+
+.aboutSection2{
+  margin-top: 72px;
+}
+
+.aboutSection2 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+    height: auto;
+    width: 60px;
+}
+
+
+.aboutSection2 p {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 17px;
+    color: #1C1A35;
+    font-family: 'Poppins';
+}
+.aboutSection2 .title {
+    font-family: proximaNova;
+    font-size: 21px;
+    padding-bottom: 20px;
+    color: #1C1A35;
+}
+.footerTitle {
+    padding-top: 8em;
+        text-align: right;
+}
+.footerTitle h4{
+  color: white;
+  font-weight: lighter;
+  font-size: 30px; 
+
+}
+#footerSection {
+    margin-top: 5vw;
+    padding-bottom: 12vw;
+}
+.aboutSection1 {
+    padding-top: 8vw;
+}
+.footerTitle h1 {
+    color: #313254;
+    font-weight: bold;
+    font-size: 90px;
+    margin-top: 0;
+}
+
+.footerContent{
+  color: white;
+  margin-top: 144px;
+}
+
+.footerContent h3{
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.footerContent p{
+  font-size: 18px;
+}
+
+.footerContent span{
+  color: aqua;
+}
+
+.nfluenceLogo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+ 
+}
+
+.nfluenceLogoLine{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brands p,h3{
+  text-align: right;
+}
+
+.nfluence{
+  display: inline-block;
+
+}
+.verticalLine{
+  padding-bottom: 220px;
+  background-image: linear-gradient(black 66%, aqua 0%);
+  background-position: center;
+  background-size: 2px 5px;
+  background-repeat: repeat-y;
+}
+
+.underLine {
+  border: 2px solid #6B3ECD;
+  width: 19%;
+  margin-top: 5px;
+  margin-bottom: 35px;
+
+}
+   /* end about us code */
+
+
 .btn-primary.focus, .btn-primary:focus {
     color: #fff;
     background-color: #8352ff !important;
@@ -721,6 +865,13 @@ section#boxsSection {
     .brandTitle .title {
     font-size: 80px;
 }
+.aboutSection2 p {
+    font-size: 14px !important;
+}
+.aboutSection1 p {
+    font-size: 14px !important;
+    line-height: 32px !important;
+}
 .headerImage {
     height: 160px !important;
 }
@@ -759,8 +910,18 @@ section#boxsSection {
 .screens span img {
     width: 40px;
 }
- 
-
+}
+@media all and (max-width:1400px){
+.mainBannerSection .bannerContent h1 {
+    font-size: 80px;
+    line-height: 79px;
+}
+.howItWorksSection .sectionTitle {
+    font-size: 82px;
+}
+.signUpBanner {
+    height: 388px !important;
+}
 }
 @media  all and (max-width:1272px) {
     section#audience_control {
@@ -785,20 +946,11 @@ section#boxsSection {
 }
  
 }
-@media all and (max-width:1400px){
-.mainBannerSection .bannerContent h1 {
-    font-size: 80px;
-    line-height: 79px;
-}
-.howItWorksSection .sectionTitle {
-    font-size: 82px;
-}
-.signUpBanner {
-    height: 388px !important;
-}
-}
 
 @media all and (max-width:1200px){
+    .aboutSection2 .title {
+    font-size: 16px !important;
+}
 #comperitive_advantage .comptContent p {
     max-width: 100%;
 }
@@ -823,6 +975,30 @@ section#boxsSection {
 }
 
 @media all and (max-width:995px){
+ .aboutSection1 h1 {
+    font-size: 51px !important;
+}
+    .footerContent {
+    margin-top: 0 !important;
+}
+.verticalLine {
+    display: none;
+}
+.streamers {
+    text-align: center;
+}
+.footerContent .underLine {
+    display: none;
+}
+.streamers h3 {
+    text-align: center !important;
+}
+    .footerTitle {
+    text-align: center !important;
+}
+.brands p, h3 {
+    text-align: center !important;
+}
     .logoContainer .logo img {
     width: 100%;
     max-width: 280px;
@@ -990,6 +1166,9 @@ section#boxsSection {
 }
  
 @media all and (max-width:575px){
+    .footerTitle h1 {
+    font-size: 65px !important;
+}
     .screens .leftTextPart .title::after {
     bottom: -15px;
     width: 97px;
@@ -1066,6 +1245,9 @@ section#boxsSection {
 }
 .itsTimeto p {
     font-size: 11px;
+}
+.footerContent p {
+    font-size: 13px !important;
 }
 }
 
