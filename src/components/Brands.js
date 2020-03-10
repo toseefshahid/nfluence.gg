@@ -168,7 +168,7 @@ class Brands extends Component {
                 <div className="numbersAndMillions">
                   <div className="innerNumbers">
                     <span className="numbers">$5</span>
-                    <span className="millions"> M </span>
+                    {/* <span className="millions"> M </span> */}
                   </div>
                   <div className="innerglobal">
                     <p className="globalContent">REVENUE PER FAN</p>
