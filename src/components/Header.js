@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import headerImage from "../images/header-image.png";
 import navImage from "../images/navImage.png";
 import Logo from "../images/logo.png";
-import TwitchIcon from "../images/twitchIcon.png";
 import { Link } from "react-router-dom";
+import TwitchIcon from "../images/twitchIcon.png";
 import $ from "jquery";
 
   class Header extends Component {
@@ -20,16 +20,28 @@ import $ from "jquery";
           .parent(".nav-item")
           .addClass("active");
       });
-          if ($(window).width() < 530) {
-            var text = $(".signUpLink .signUpTwitch span").text();
-            $(".signUpLink .signUpTwitch span").text(
-              text.replace("Sign up with Twitch", "Sign up")
-            );
-          }
-
-       
+      if ($(window).width() < 530) {
+        var text = $(".signUpLink .signUpTwitch span").text();
+        $(".signUpLink .signUpTwitch span").text(
+          text.replace("Sign up with Twitch", "Sign up")
+        );
+      }
+    }
+    showLoading(message) {
+      // method to let previous component know to display loader
+      this.props.showLoading(message);
+    }
+    handleLoginSuccess(user) {
+      // method to let previous component know that user has successfully logged in
+      this.props.onLoginSuccess(user);
     }
 
+    signUpWithTwitchButtonClicked() {
+      if (this.props.onSignUpClicked) {
+        this.props.onSignUpClicked();
+      }
+    }
+    
     render() {
       var headerImg = {
         width: "auto",
@@ -60,10 +72,13 @@ import $ from "jquery";
                 </Link>
               </div>
               <div className="actionButton signUpLink">
-                <button class="btn btn-primary signUpTwitch">
+                <button
+                  class="btn btn-primary signUpTwitch"
+                  onClick={() => this.signUpWithTwitchButtonClicked()}
+                >
                   {" "}
                   <img src={TwitchIcon} />
-                  <span>Sign up with Twitch </span>
+                  <span> Sign up with Twitch </span>
                 </button>
               </div>
             </div>

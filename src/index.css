@@ -24,12 +24,164 @@ code {
     font-family: proximaNovaXBold;
      src: url("./fonts/proximaNovaXBold.ttf");
   }
+.msgsForUsers {
+    position: relative;
+    padding-top: 12px;
+}
+.iconEmail {
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+}
+#signUpPopup .modal-header {
+    height: 45px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#newletter .form input {
+    width: 100%;
+    display: block;
+     margin: auto;
+    height: 40px;
+    border-radius: 4px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    margin-bottom: 26px;
+    TEXT-ALIGN: left;
+    font-family: proximaNova;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: white;
+    padding-left: 37px;
+    padding-right: 20px;
+}
+div#myUniqueBarError {
+    background: #dc3545!important;
+        z-index: 9999999999;
+}
+.iconEmail .fa-envelope.icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: white;
+}
+.iconId .fa-id-card-o {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: white;
+}
+.modal-header .modal-title {
+    color: white;
+}
+.modal-header .close {
+    color: white;
+    opacity: 1;
+}
+.iconId {
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+}
+ #newletter .actionButton {
+    text-align: center;
+    padding: 0;
+}
+#newletter .actionButton .signUpTwitch {
+    width: 100%;
+    max-width: 140px;
+   height: 40px;
+}
+.snackbar {
+    visibility: hidden;
+    max-width: max-content;
+    margin-left: 0;
+    background-color: #151a36;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+    font-size: 17px;
+    text-align: center;
+    margin: auto;
+    /* width: 100%; */
+}
+.msgsForUsers .errorMessages i {
+    padding-right: 10px;
+    /* color: red; */
+}
+.msgsForUsers .errorMessages::before {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #8352ff;
+    font-size: 0;
+    line-height: 0;
+    /* float: left; */
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-top: 0;
+    margin-left: 7px;
+    transform: rotate(180deg);
+    top: -9px;
+}
+.msgsForUsers .errorMessages {
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    font-size: 13px;
+    top: 52px;
+    right: 0;
+    color: white;
+    margin: auto;
+    text-align: center;
+    background: #8352ff;
+    max-width: max-content;
+    height: 40px;
+    display: none;
+    padding-top: 9px;
+    padding-left: 9px;
+    padding-right: 20px;
+    border-radius: 4px;
+ }
+.snackbar .fa-close {
+    margin-left: 10px;
+}
+    .snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            text-transform: capitalize;
+    }
 
+    @-webkit-keyframes fadein {
+        from {bottom: 0; opacity: 0;} 
+        to {bottom: 30px; opacity: 1;}
+    }
 
+    @keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+    }
 
-
-
-
+.mainBannerSection .signUpLink {
+    display: block !important;
+    float: none;
+}
+.signUpBanner .signUpLink {
+    float: none;
+    display: block;
+}
+._loading_overlay_wrapper {
+    position: initial !important;
+}
    /*  Start about us code */
 .mainSection{
   font-family: 'Poppins';
