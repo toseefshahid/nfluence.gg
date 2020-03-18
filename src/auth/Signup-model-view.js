@@ -76,7 +76,8 @@ $("#myUniqueBarError").removeClass("show");
       },
       error => {
         let errorMessage = "Failed";
-        if (error && error.email.length > 0) {
+        debugger
+        if (error && error.email.length !== "undefined" ) {
           errorMessage = error.email[0];
         }
         this.setState({
