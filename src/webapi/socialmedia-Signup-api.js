@@ -53,7 +53,7 @@ export default class SocialMediaSignUpAPI {
       }
     };
 
-    return fetch(`${WebApiConfig.BaseURL}/subscribe/`, requestOptions)
+    return fetch(`${WebApiConfig.BaseURL}`, requestOptions)
       .then(response => this.handleResponse(response))
       .then(response => {
         return response;

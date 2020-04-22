@@ -28,11 +28,7 @@ code {
     position: relative;
     padding-top: 12px;
 }
-.iconEmail {
-    position: relative;
-    max-width: 350px;
-    margin: auto;
-}
+ 
 #signUpPopup .modal-header {
     height: 45px;
     padding-top: 5px;
@@ -78,7 +74,7 @@ div#myUniqueBarError {
     color: white;
     opacity: 1;
 }
-.iconId {
+.msgsForUsers  .field  {
     position: relative;
     max-width: 350px;
     margin: auto;
