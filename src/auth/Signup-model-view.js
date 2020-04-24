@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import PopupBackground from "../images/popupBack.png";
 import $ from "jquery";
 import SocialMediaSignUpAPI from "../webapi/socialmedia-Signup-api";
-import firebase from '../firebase';  
+import axios from 'axios';
+import firebase from '../firebase';
 
 class CATAudioModalView extends Component {
   constructor() {
@@ -12,15 +13,10 @@ class CATAudioModalView extends Component {
       twitchEmail: "",
       twitchId: "",
       currentDate: "",
-      // currentTime: "",
-
-      showMessage: false,
-      message: ""
     };
-
-    this.socialApi = new SocialMediaSignUpAPI();
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleLoginKeyUp = this.keyUpHandler.bind(this);
+    // this.socialApi = new SocialMediaSignUpAPI();
+    // this.handleLoginKeyUp = this.keyUpHandler.bind(this);
   }
 
   // component lifecycle methods
@@ -30,26 +26,12 @@ class CATAudioModalView extends Component {
   }
 
   // helper methods
-
-  handleInputChange(e) {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
-  }
-
   loadJQuery() {
-    $("body").click(function(evt) {
+    $("body").click(function (evt) {
       if (evt.target.id === "myUniqueBarError") return;
       $("#myUniqueBarError").removeClass("show");
     });
     $(".popup-trigger").click();
-
-    //called when key is pressed in textbox
-    // $(".twitch-id").keypress(function(e) {
-    //   //if the letter is not digit then display error and don't type anything
-    //   if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-    //     return false;
-    //   }
-    // });
   }
 
   // buttons action methods
@@ -60,185 +42,80 @@ class CATAudioModalView extends Component {
       $(".close").click();
     }
   }
+  handleInputChange(e) {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
 
-  keyUpHandler(e) {
-    let TodayDate = new Date();
-    let month = TodayDate.getMonth() + 1;
-    let day = TodayDate.getDate();
-    let dateOnly =
-      TodayDate.getFullYear() +
-      "/" +
-      (("" + month).length < 2 ? "0" : "") +
-      month +
-      "/" +
-      (("" + day).length < 2 ? "0" : "") +
-      day;
-    let time =
-      TodayDate.getHours() +
-      ":" +
-      TodayDate.getMinutes() +
-      ":" +
-      TodayDate.getSeconds();
-    this.setState({
-      currentDate: dateOnly + "," + time
-      // currentTime: time
-    });
   }
 
-  signUpButtonClicked(e) {
-    
-    // const data = {
-    //   subscriber: {
-    //     email: this.state.twitchEmail,
-    //     twitch_id: this.state.twitchId
-    //   }
-    // };
-    //   debugger;
-    // this.subscribe(data);
-
-    // e.preventDefault();
-  let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-     if (this.state.twitchEmail == "") {
-       debugger;
-       $(".msgsForUsers .email-id").fadeIn();
-       setTimeout(function() {
-         $(".msgsForUsers .email-id").fadeOut();
-       }, 5000);
-       $(".msgsForUsers .email-id").html(
-         '<i class="fa fa-warning"></i>' + "Please fill in this field"
-       );
-       return false;
-     }
-       else if (reg.test(this.state.twitchEmail) === false) {
-         $(".msgsForUsers .email-id").fadeIn();
-         setTimeout(function() {
-           $(".msgsForUsers .email-id").fadeOut();
-         }, 5000);
-         $(".email-id").removeClass("alreadyExist");
-         $(".msgsForUsers .email-id").html(
-           '<i class="fa fa-warning"></i>' + "Invalid email address"
-         );
-         return false;
-       } else if (this.state.twitchId == "") {
-         $(".msgsForUsers .twitch-id-error").fadeIn();
-         setTimeout(function() {
-           $(".msgsForUsers .twitch-id-error").fadeOut();
-         }, 5000);
-         $(".twitch-id-error").removeClass("alreadyExist");
-         $(".msgsForUsers .twitch-id-error").html(
-           '<i class="fa fa-warning"></i>' + "Please fill in this field"
-         );
-         return false;
-       }
-    const subscribersRef = firebase.database().ref("subscribers");
-    const subscribers = {
-      Email: this.state.twitchEmail,
-      Twitch_id: this.state.twitchId,
-      date: this.state.currentDate
-      // Time: this.state.currentTime
-    };
-    subscribersRef.push(subscribers);
-    debugger
-    if (subscribersRef.database) {
-              $(".close").click();
-           var x = document.getElementById("myUniqueBar");
-           x.classList.add("show");
+  signUpButtonClicked = async (data) => {
+    fetch('http://127.0.0.1:8000/api/register', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: this.state.twitchEmail,
+        twitch_id: this.state.twitchId
+      })
+    }).then((Response) => Response.json())
+      .then((Result) => {
+        if (Result.status == 200) {
+          $(".close").click();
+          var x = document.getElementById("myUniqueBar");
+          x.classList.add("show");
           $("#myUniqueBar").html(
             '  <i class="fa fa-check"></i> ' + 'Subscribe Successful. Thank you' +
             '<i class="fa fa-close"></i>'
           );
-           setTimeout(function() {
-             x.className = x.className.replace("show", "");
-           }, 7000);
-           
-    }
-      }
-
-  subscribe(data) {
-    this.setState({
-      showMessage: false,
-      message: ""
-    });
-
-    new SocialMediaSignUpAPI().subscribe(data).then(
-      response => {
-        if (response.success) {
-          if (this.props.onSuccess) {
-            $(".close").click();
-            this.props.onSuccess(response.success);
-          }
-        }
-      },
-      error => {
-        let errorMessage = "Failed";
-        if (error && error.email) {
-          errorMessage = error.email[0];
-        } else if (error.twitch_id) {
-          errorMessage = error.twitch_id[0];
-        }
-        this.setState({
-          showMessage: true,
-          message: errorMessage
-        });
-
-        setTimeout(() => {
-          this.setState({
-            showMessage: false,
-            message: ""
-          });
-        }, 7000);
-      }
-    );
-  }
-
-  render() {
-    if (this.state.showMessage) {
-      if (
-        this.state.message == "This field may not be blank." ||
-        this.state.message == "Enter a valid email address." ||
-        this.state.message == "This field may not be blank." ||
-        this.state.message == "subscriber with this email already exists." ||
-        this.state.message == "Failed"
-      ) {
-        $(".msgsForUsers .email-id").fadeIn();
-        setTimeout(function() {
-          $(".msgsForUsers .email-id").fadeOut();
-        }, 5000);
-        if (this.state.message == "Enter a valid email address.") {
+          setTimeout(function () {
+            x.className = x.className.replace("show", "");
+          }, 7000);
+        } else if (Result.error.email == "The email must be a valid email address.") {
+          $(".msgsForUsers .email-id").fadeIn();
+          setTimeout(function () {
+            $(".msgsForUsers .email-id").fadeOut();
+          }, 5000);
           $(".email-id").removeClass("alreadyExist");
           $(".msgsForUsers .email-id").html(
             '<i class="fa fa-warning"></i>' + "Invalid email address"
           );
-        } else if (this.state.message == "This field may not be blank.") {
+        } else if (Result.error.email == "The email field is required.") {
+          $(".msgsForUsers .email-id").fadeIn();
+          setTimeout(function () {
+            $(".msgsForUsers .email-id").fadeOut();
+          }, 5000);
           $(".email-id").removeClass("alreadyExist");
           $(".msgsForUsers .email-id").html(
             '<i class="fa fa-warning"></i>' + "Please fill in this field"
           );
-        } else if (this.state.message == "Failed") {
-          $(".errorMessages").removeClass("alreadyExist");
-          $(".msgsForUsers .errorMessages").html(
-            '<i class="fa fa-warning"></i>' + "503 internal server error"
-          );
-        } else if (
-          this.state.message == "subscriber with this email already exists."
-        ) {
-          $(".email-id").addClass("alreadyExist");
+        }
+        else if (Result.error.email == "The email has already been taken.") {
+          $(".msgsForUsers .email-id").fadeIn();
+          setTimeout(function () {
+            $(".msgsForUsers .email-id").fadeOut();
+          }, 5000);
+          $(".email-id").removeClass("alreadyExist");
           $(".msgsForUsers .email-id").html(
-            '<i class="fa fa-warning"></i>' +
-              "Subscriber with this email already exists"
+            '<i class="fa fa-warning"></i>' + "Subscriber with this email already exists."
           );
         }
-      } else if (this.state.message == "A valid integer is required.") {
-        $(".msgsForUsers .twitch-id-error").fadeIn();
-        setTimeout(function() {
-          $(".msgsForUsers .twitch-id-error").fadeOut();
-        }, 5000);
-        $(".twitch-id-error").removeClass("alreadyExist");
-        $(".msgsForUsers .twitch-id-error").html(
-          '<i class="fa fa-warning"></i>' + "A valid integer is required."
-        );
-      }
-    }
+        else if (Result.error.twitch_id == "The twitch id field is required.") {
+          $(".msgsForUsers .twitch-id-error").fadeIn();
+          setTimeout(function () {
+            $(".msgsForUsers .twitch-id-error").fadeOut();
+          }, 5000);
+          $(".twitch-id-error").removeClass("alreadyExist");
+          $(".msgsForUsers .twitch-id-error").html(
+            '<i class="fa fa-warning"></i>' + "Please fill in this field"
+          );
+        }
+      })
+
+  }
+
+  render() {
     var popupBackgroundImage = {
       height: "auto",
       backgroundRepeat: "no-repeat",
@@ -348,7 +225,7 @@ class CATAudioModalView extends Component {
 
                     <div class="actionButton">
                       <button
-                      type="submit"
+                        type="submit"
                         class="btn btn-primary signUpTwitch"
                         onClick={() => this.signUpButtonClicked()}
                       >
