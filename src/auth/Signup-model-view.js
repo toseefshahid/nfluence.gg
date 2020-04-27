@@ -49,7 +49,7 @@ class CATAudioModalView extends Component {
   }
 
   signUpButtonClicked = async (data) => {
-    fetch('http://127.0.0.1:8000/api/register', {
+    fetch('https://shielded-thicket-38521.herokuapp.com/api/register', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
